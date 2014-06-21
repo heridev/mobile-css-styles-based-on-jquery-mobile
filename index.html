@@ -6,7 +6,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <link rel="stylesheet" href="jquery.mobile-1.3.1.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="js/libs/jquery-1.11.0.js"></script>
+  <script src="js/element-events.js"></script>
 </head>
 <body>
 
@@ -14,6 +15,7 @@
 
   <div data-role="content" class="ui-content" role="main">
 
+    <form id='main-form'>
     <!-- list of element -->
 
     <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
@@ -54,19 +56,9 @@
 
       <div class="ui-controlgroup-controls">
 
-        <div class="ui-radio">
-          <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked">
-          <label for="radio-choice-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-on" data-theme="c" data-mini="false" class="ui-radio-on ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
-            <span class="ui-btn-inner">
-              <span class="ui-btn-text">Cat</span>
-              <span class="ui-icon ui-icon-radio-on ui-icon-shadow">&nbsp;</span>
-            </span>
-          </label>
-        </div>
-
-        <div class="ui-radio">
-          <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
-          <label for="radio-choice-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+        <div class="ui-radio vertical">
+          <input type="radio" name="vertical-radio" id="vertical-radio-1" value="vertical-radio-1">
+          <label for="vertical-radio-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
             <span class="ui-btn-inner">
               <span class="ui-btn-text">Dog</span>
               <span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
@@ -74,9 +66,19 @@
           </label>
         </div>
 
-        <div class="ui-radio">
-          <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
-          <label for="radio-choice-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-btn-up-c">
+        <div class="ui-radio vertical">
+          <input type="radio" name="vertical-radio" id="vertical-radio-2" value="vertical-radio-2">
+          <label for="vertical-radio-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+            <span class="ui-btn-inner">
+              <span class="ui-btn-text">Dog</span>
+              <span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="ui-radio vertical">
+          <input type="radio" name="vertical-radio" id="vertical-radio-3" value="vertical-radio-3">
+          <label for="vertical-radio-3" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-btn-up-c">
             <span class="ui-btn-inner">
               <span class="ui-btn-text">Dog</span>
               <span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
@@ -91,16 +93,14 @@
         <div data-role="controlgroup" data-type="horizontal" class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" aria-disabled="false" data-disabled="false" data-shadow="false" data-corners="true" data-exclude-invisible="true" data-mini="false" data-init-selector=":jqmData(role='controlgroup')">
 
           <div role="heading" class="ui-controlgroup-label">
-            <legend>Choose as many snacks as you'd like:</legend>
+            <legend>Choose as many snacks as you'd like select only one:</legend>
           </div>
 
           <div class="ui-controlgroup-controls">
 
-            <div class="ui-radio"><input type="radio" name="radio-view-b" id="radio-view-c" value="on" checked="checked"><label for="radio-view-c" data-theme="c" class="ui-btn ui-corner-left ui-btn-active ui-btn-up-c"><span class="ui-btn-inner ui-corner-left"><span class="ui-btn-text">List</span></span></label></div>
-
-            <div class="ui-radio">
-              <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked">
-              <label for="radio-choice-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-on" data-theme="c" data-mini="false" class="ui-radio-on ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+            <div class="ui-radio horizontal">
+              <input type="radio" name="radio-horizontal" id="radio-horizontal-1" value="radio-horizontal-1">
+              <label for="radio-horizontal-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-on" data-theme="c" data-mini="false" class="ui-radio-on ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text">Cat</span>
                   <span class="ui-icon ui-icon-radio-on ui-icon-shadow">&nbsp;</span>
@@ -108,9 +108,19 @@
               </label>
             </div>
 
-            <div class="ui-radio">
-              <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
-              <label for="radio-choice-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+            <div class="ui-radio horizontal">
+              <input type="radio" name="radio-horizontal" id="radio-horizontal-2" value="radio-horizontal-2">
+              <label for="radio-horizontal-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-on" data-theme="c" data-mini="false" class="ui-radio-on ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+                <span class="ui-btn-inner">
+                  <span class="ui-btn-text">Cat</span>
+                  <span class="ui-icon ui-icon-radio-on ui-icon-shadow">&nbsp;</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="ui-radio horizontal">
+              <input type="radio" name="radio-horizontal" id="radio-horizontal-3" value="radio-horizontal-3">
+              <label for="radio-horizontal-3" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text">Dog</span>
                   <span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
@@ -118,9 +128,9 @@
               </label>
             </div>
 
-            <div class="ui-radio">
-              <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
-              <label for="radio-choice-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-btn-up-c">
+            <div class="ui-radio horizontal">
+              <input type="radio" name="radio-horizontal" id="radio-horizontal-4" value="radio-horizontal-4">
+              <label for="radio-horizontal-4" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" data-mini="false" class="ui-radio-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-btn-up-c">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text">Dog</span>
                   <span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
@@ -139,19 +149,9 @@
       </div>
       <div class="ui-controlgroup-controls">
 
-        <div class="ui-checkbox">
-          <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
-          <label for="checkbox-1a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-on" data-theme="c" data-mini="false" class="ui-first-child ui-checkbox-on ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-btn-up-c">
-            <span class="ui-btn-inner">
-              <span class="ui-btn-text">Cheetos</span>
-              <span class="ui-icon ui-icon-checkbox-on ui-icon-shadow">&nbsp;</span>
-            </span>
-          </label>
-        </div>
-
-        <div class="ui-checkbox">
-          <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
-          <label for="checkbox-1a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+        <div class="ui-checkbox vertical">
+          <input type="checkbox" name="vertical-checkbox" id="vertical-checkbox-0" value="vertical-checkbox-0" class="custom">
+          <label for="vertical-checkbox-0" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
             <span class="ui-btn-inner">
               <span class="ui-btn-text">Cheetos</span>
               <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -159,9 +159,9 @@
           </label>
         </div>
 
-        <div class="ui-checkbox">
-          <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
-          <label for="checkbox-1a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+        <div class="ui-checkbox vertical">
+          <input type="checkbox" name="vertical-checkbox" id="vertical-checkbox-1" value="vertical-checkbox-1" class="custom">
+          <label for="vertical-checkbox-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
             <span class="ui-btn-inner">
               <span class="ui-btn-text">Cheetos</span>
               <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -169,9 +169,19 @@
           </label>
         </div>
 
-        <div class="ui-checkbox">
-          <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
-          <label for="checkbox-1a" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+        <div class="ui-checkbox vertical">
+          <input type="checkbox" name="vertical-checkbox" id="vertical-checkbox-2" value="vertical-checkbox-2" class="custom">
+          <label for="vertical-checkbox-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
+            <span class="ui-btn-inner">
+              <span class="ui-btn-text">Cheetos</span>
+              <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="ui-checkbox vertical">
+          <input type="checkbox" name="vertical-checkbox" id="vertical-checkbox-3" value= "vertical-checkbox-3" class="custom">
+          <label for="vertical-checkbox-3" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-first-child ui-btn-up-c">
             <span class="ui-btn-inner">
               <span class="ui-btn-text">Cheetos</span>
               <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -195,9 +205,9 @@
 
           <div class="ui-controlgroup-controls">
 
-            <div class="ui-checkbox">
-              <input type="checkbox" name="checkbox-7c" id="checkbox-7c" class="custom">
-              <label for="checkbox-7c" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
+            <div class="ui-checkbox horizontal">
+              <input type="checkbox" name="horizonal-checkbox" id="horizonal-checkbox-1" value="horizonal-checkbox-1" class="custom">
+              <label for="horizonal-checkbox-1" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text"><em>i</em></span>
                   <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -205,9 +215,9 @@
               </label>
             </div>
 
-            <div class="ui-checkbox">
-              <input type="checkbox" name="checkbox-7c" id="checkbox-7c" class="custom">
-              <label for="checkbox-7c" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
+            <div class="ui-checkbox horizontal">
+              <input type="checkbox" name="horizonal-checkbox" id="horizonal-checkbox-2" value="horizonal-checkbox-2" class="custom">
+              <label for="horizonal-checkbox-2" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text"><em>i</em></span>
                   <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -215,19 +225,9 @@
               </label>
             </div>
 
-            <div class="ui-checkbox">
-              <input type="checkbox" name="checkbox-6c" id="checkbox-6c" class="custom">
-              <label for="checkbox-6c" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-on" data-theme="c" data-mini="false" class="ui-checkbox-on ui-btn-active ui-btn ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-btn-up-c">
-                <span class="ui-btn-inner">
-                  <span class="ui-btn-text">b</span>
-                  <span class="ui-icon ui-icon-checkbox-on ui-icon-shadow">&nbsp;</span>
-                </span>
-              </label>
-            </div>
-
-            <div class="ui-checkbox">
-              <input type="checkbox" name="checkbox-7c" id="checkbox-7c" class="custom">
-              <label for="checkbox-7c" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
+            <div class="ui-checkbox horizontal">
+              <input type="checkbox" name="horizonal-checkbox" id="horizonal-checkbox-3" value="horizonal-checkbox-3" class="custom">
+              <label for="horizonal-checkbox-3" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text"><em>i</em></span>
                   <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -235,9 +235,19 @@
               </label>
             </div>
 
-            <div class="ui-checkbox">
-              <input type="checkbox" name="checkbox-7c" id="checkbox-7c" class="custom">
-              <label for="checkbox-7c" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
+            <div class="ui-checkbox horizontal">
+              <input type="checkbox" name="horizonal-checkbox" id="horizonal-checkbox-4" value="horizonal-checkbox-4" class="custom">
+              <label for="horizonal-checkbox" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
+                <span class="ui-btn-inner">
+                  <span class="ui-btn-text"><em>i</em></span>
+                  <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="ui-checkbox horizontal">
+              <input type="checkbox" name="horizonal-checkbox" id="horizonal-checkbox-5" value="horizonal-checkbox-5" class="custom">
+              <label for="horizonal-checkbox-5" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="checkbox-off" data-theme="c" data-mini="false" class="ui-checkbox-off ui-btn ui-btn-up-c ui-btn-corner-all ui-fullsize ui-btn-icon-left ui-last-child">
                 <span class="ui-btn-inner">
                   <span class="ui-btn-text"><em>i</em></span>
                   <span class="ui-icon ui-icon-checkbox-off ui-icon-shadow">&nbsp;</span>
@@ -273,6 +283,17 @@
       </div>
 
       <!-- end select or dropdown options-->
+
+
+      <!-- beging input text -->
+
+      <div class="ui-input-text ui-shadow-inset ui-corner-all ui-btn-shadow ui-body-c">
+        <input type="text" name="name" id="name-c" value="" class="ui-input-text ui-body-c">
+      </div>
+      <!-- end input text -->
+
+
+      </form>
 
   </div><!-- /content -->
 
