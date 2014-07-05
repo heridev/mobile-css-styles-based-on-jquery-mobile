@@ -51,7 +51,25 @@ $(function () {
     $(this).parent().find('label').removeClass('ui-checkbox-on')
     $(this).parent().find('.ui-btn-inner .ui-icon').removeClass('ui-icon-radio-on')
     $(this).parent().find('.ui-btn-inner .ui-icon').addClass('ui-icon-radio-off')
-    input.prop('checked', false);
+    //end of reseting elements
+
+    $(this).children('label').addClass('ui-checkbox-on')
+    $(this).find('.ui-btn-inner .ui-icon').addClass('ui-icon-radio-on')
+    $(this).find('.ui-btn-inner .ui-icon').removeClass('ui-icon-radio-off')
+    input.prop('checked', true);
+
+  });
+
+  $("tr.ui-controlgroup-controls .ui-radio.vertical").click(function(event) {
+    event.preventDefault();
+    var input = $(this).find('input');
+    //reset all the radios in that group
+    var groupName = input.attr('name');
+    $('input[name="' + groupName +'"]').prop('checked', false);
+    var parentGroup = $(this).closest('.ui-controlgroup-controls');
+    parentGroup.find('label').removeClass('ui-checkbox-on')
+    parentGroup.find('.ui-btn-inner .ui-icon').removeClass('ui-icon-radio-on')
+    parentGroup.find('.ui-btn-inner .ui-icon').addClass('ui-icon-radio-off')
     //end of reseting elements
 
     $(this).children('label').addClass('ui-checkbox-on')
@@ -71,7 +89,6 @@ $(function () {
     $(this).parent().find('label').addClass('ui-checkbox-off')
     $(this).parent().find('.ui-btn-inner .ui-icon').removeClass('ui-icon-radio-on')
     $(this).parent().find('.ui-btn-inner .ui-icon').addClass('ui-icon-radio-off')
-    input.prop('checked', false);
     //end of reseting elements
 
     $(this).children('label').addClass('ui-btn-active ui-btn-up-c')
